@@ -1,0 +1,826 @@
+/* ===== RESET A ZÁKLADNÍ NASTAVENÍ ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hladké scrollování */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===== HEADER (HORNÍ LIŠTA) ===== */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* Navigace */
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+nav a.active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Vyhledávání */
+.search {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.search input {
+    padding: 10px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    outline: none;
+    width: 220px;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.search input:focus {
+    width: 250px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    border-color: white;
+}
+
+.search input::placeholder {
+    color: #999;
+}
+
+.search button {
+    padding: 10px 18px;
+    background-color: white;
+    color: #667eea;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+.search button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== HLAVNÍ OBSAH ===== */
+main {
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: calc(100vh - 200px);
+}
+
+h1 {
+    font-size: 42px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* ===== DOMOVSKÁ STRÁNKA ===== */
+
+/* Hero sekce */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 60px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: white;
+    -webkit-text-fill-color: white;
+}
+
+.hero-popis {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    color: white;
+}
+
+/* Tlačítko */
+.btn-primary {
+    display: inline-block;
+    background-color: white;
+    color: #667eea;
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Statistiky */
+.statistiky {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.stat-box {
+    background: white;
+    padding: 40px 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+}
+
+.stat-box h2 {
+    font-size: 48px;
+    color: #667eea;
+    margin-bottom: 10px;
+}
+
+.stat-box p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Preview nemocí */
+.preview {
+    margin-bottom: 60px;
+}
+
+.preview h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.nemoci-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Karty nemocí (velké) */
+.nemoc-karta {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.nemoc-karta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.nemoc-ikona {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.nemoc-karta h3 {
+    color: #667eea;
+    font-size: 22px;
+    margin-bottom: 15px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nemoc-karta p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.btn-vice {
+    display: inline-block;
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 2px solid #667eea;
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+
+.btn-vice:hover {
+    background-color: #667eea;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* ===== STRÁNKA NEMOCÍ ===== */
+
+.katalog-header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 15px;
+    margin-bottom: 60px;
+}
+
+/* Kategorie */
+.kategorie {
+    margin-bottom: 60px;
+}
+
+.kategorie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.kategorie-karta {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 3px solid transparent;
+}
+
+.kategorie-karta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    border-color: #667eea;
+}
+
+.kategorie-karta.aktivni {
+    border-color: #667eea;
+    background: linear-gradient(135deg, #f5f7ff 0%, #e8ebff 100%);
+}
+
+.kategorie-ikona {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+/* Seznam nemocí (malé karty) */
+.seznam-nemoci {
+    margin-bottom: 60px;
+}
+
+.seznam-nemoci h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.nemoci-grid-seznam {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+.nemoc-karta-mala {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.nemoc-karta-mala:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.nemoc-ikona-mala {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.nemoc-karta-mala h3 {
+    color: #667eea;
+    font-size: 18px;
+    margin-bottom: 10px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nemoc-karta-mala p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.btn-vice-maly {
+    display: inline-block;
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 20px;
+    border: 2px solid #667eea;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.btn-vice-maly:hover {
+    background-color: #667eea;
+    color: white;
+}
+
+/* Detailní články */
+.detaily-nemoci {
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 2px solid #e0e0e0;
+}
+
+.nemoc {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    scroll-margin-top: 100px;
+}
+
+.nemoc h2 {
+    color: #667eea;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 15px;
+}
+
+.nemoc h3 {
+    margin-top: 30px;
+}
+
+.nemoc-obrazek {
+    width: 100%;
+    max-width: 700px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 auto 25px;
+    display: block;
+}
+
+.nemoc-info {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.info-badge {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nemoc .popis {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+.nemoc ul {
+    list-style: none;
+    margin-bottom: 30px;
+    padding-left: 0;
+}
+
+.nemoc li {
+    padding: 12px 0 12px 35px;
+    position: relative;
+    color: #555;
+    line-height: 1.6;
+}
+
+.nemoc li::before {
+    content: '•';
+    color: #667eea;
+    font-size: 28px;
+    position: absolute;
+    left: 0;
+    top: 8px;
+}
+
+.zajimavost {
+    background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #f39c12;
+    margin-top: 30px;
+}
+
+.zajimavost strong {
+    color: #d35400;
+    font-size: 18px;
+}
+
+/* ===== STRÁNKA O WEBU ===== */
+
+.o-webu-obsah {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.o-webu-obsah h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.o-webu-box {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.o-webu-box h2 {
+    color: #667eea;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.o-webu-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.o-webu-box li {
+    padding: 10px 0 10px 30px;
+    position: relative;
+}
+
+.o-webu-box li::before {
+    content: '✓';
+    color: #667eea;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.upozorneni {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+    border-left: 5px solid #e74c3c;
+}
+
+.upozorneni h2 {
+    color: #c0392b;
+}
+
+/* ===== STRÁNKA KONTAKT ===== */
+
+.kontakt-obsah {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.kontakt-obsah h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.kontakt-popis {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.kontakt-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.kontakt-box {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.kontakt-box h2 {
+    color: #667eea;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.kontakt-box a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.kontakt-box a:hover {
+    text-decoration: underline;
+}
+
+/* Formulář */
+.kontakt-formular {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.kontakt-formular h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.kontakt-formular .btn-primary {
+    width: 100%;
+}
+
+/* ===== PATIČKA ===== */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+}
+
+footer p {
+    color: white;
+    margin: 5px 0;
+}
+
+.disclaimer {
+    font-size: 12px;
+    color: #bdc3c7;
+    margin-top: 10px;
+}
+
+/* ===== RESPONZIVNÍ DESIGN ===== */
+
+@media (max-width: 992px) {
+    .nemoci-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .nemoci-grid-seznam {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    nav {
+        width: 100%;
+        order: 3;
+        margin-top: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        text-align: center;
+    }
+
+    .search {
+        margin-left: auto;
+    }
+
+    .search input {
+        width: 150px;
+    }
+
+    .search input:focus {
+        width: 150px;
+    }
+
+    main {
+        padding: 30px 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-popis {
+        font-size: 16px;
+    }
+
+    .statistiky {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-box h2 {
+        font-size: 36px;
+    }
+
+    .nemoci-grid,
+    .nemoci-grid-seznam {
+        grid-template-columns: 1fr;
+    }
+
+    .kategorie-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nemoc {
+        padding: 25px;
+    }
+
+    .nemoc h2 {
+        font-size: 26px;
+    }
+
+    .nemoc-obrazek {
+        height: 250px;
+    }
+
+    .kontakt-info {
+        grid-template-columns: 1fr;
+    }
+
+    .kontakt-formular {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 50px 15px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .btn-primary {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+
+    .search input {
+        width: 120px;
+        padding: 8px 15px;
+    }
+
+    .search button {
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+
+    .kategorie-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nemoc-karta,
+    .o-webu-box,
+    .kontakt-box {
+        padding: 20px;
+    }
+}

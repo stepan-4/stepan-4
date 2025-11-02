@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Štěpán J.">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="grafika.css">
+</head>
+<body>
+    <!-- HORNÍ LIŠTA -->
+    <header>
+        <a href="index.html" class="logo">
+            🧬 Zajímavé a vzácné nemoci
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="o-nemocech.html">O vzácních nemocech</a></li>
+                <li><a href="nemoci.html">Seznam nemocí</a></li>
+                <li><a href="o-webu.html">O webu</a></li>
+                <li><a href="kontakt.html" class="active">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <div class="search">
+            <input type="text" placeholder="Hledat nemoc...">
+            <button>🔍</button>
+        </div>
+    </header>
+
+    <!-- OBSAH - KONTAKT -->
+    <main>
+        <section class="kontakt-obsah">
+            <h1>Kontakt</h1>
+            <p class="kontakt-popis">
+                Máte dotaz, návrh na další nemoc nebo jste našli chybu? 
+                Neváhejte mě kontaktovat.
+            </p>
+
+            <div class="kontakt-info">
+                <div class="kontakt-box">
+                    <h2>Email</h2>
+                    <p><br>pepazdepa@seznam.cz</p>
+                </div>
+
+                <div class="kontakt-box">
+                    <h2>Sociální sítě</h2>
+                    <p>
+                        <a href="#"></a><br>
+                        <a href="https://www.instagram.com/_.stepannn._/">Instagram</a><br>
+                        <a href="#"></a>
+                    </p>
+                </div>
+
+                <div class="kontakt-box">
+                    <h2>Zpětná vazba</h2>
+                    <p>
+                        Vaše připomínky a návrhy jsou vítány!<br>
+                        Pomozte vylepšit tento web.
+                    </p>
+                </div>
+            </div>
+
+            <!-- KONTAKTNÍ FORMULÁŘ (volitelné) -->
+            <div class="kontakt-formular">
+                <h2>Napište mi zprávu</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="jmeno">Vaše jméno:</label>
+                        <input type="text" id="jmeno" name="jmeno" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Váš email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="zprava">Zpráva:</label>
+                        <textarea id="zprava" name="zprava" rows="6" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Odeslat zprávu</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- PATIČKA -->
+    <footer>
+        <p>&copy; 2025 Štěpán J. | Zajímavé a vzácné nemoci</p>
+        <p class="disclaimer">Informace slouží pouze ke vzdělávacím účelům.</p>
+    </footer>
+</body>
+</html>

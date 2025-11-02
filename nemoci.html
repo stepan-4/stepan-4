@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Štěpán J.">
+    <title>Seznam nemocí</title>
+    <link rel="stylesheet" href="grafika.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            🧬 Zajímavé a vzácné nemoci
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="o-nemocech.html">O vzácních nemocech</a></li>
+                <li><a href="nemoci.html" class="active">Seznam nemocí</a></li>
+                <li><a href="o-webu.html">O webu</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Hledat nemoc...">
+            <button>🔍</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="katalog-header">
+            <h1>Seznam nemocí</h1>
+            <p>Vyberte kategorii nebo prohlížejte všechny nemoci</p>
+        </section>
+
+        <!-- KATEGORIE NEMOCÍ -->
+        <section class="kategorie">
+            <div class="kategorie-grid">
+                
+                <div class="kategorie-karta" data-kategorie="vse">
+                    <div class="kategorie-ikona">📚</div>
+                    <h3>Všechny nemoci</h3>
+                    <p>Zobrazit kompletní seznam</p>
+                </div>
+
+                <div class="kategorie-karta" data-kategorie="geneticke">
+                    <div class="kategorie-ikona">🧬</div>
+                    <h3>Genetické</h3>
+                    <p>Vrozené nemoci</p>
+                </div>
+
+                <div class="kategorie-karta" data-kategorie="autoimunitni">
+                    <div class="kategorie-ikona">🛡️</div>
+                    <h3>Autoimunitní</h3>
+                    <p>Poruchy imunitního systému</p>
+                </div>
+
+                <div class="kategorie-karta" data-kategorie="neurologicke">
+                    <div class="kategorie-ikona">🧠</div>
+                    <h3>Neurologické</h3>
+                    <p>Poruchy nervového systému</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEZNAM NEMOCÍ -->
+        <section class="seznam-nemoci">
+            <h2 id="aktualni-kategorie">Všechny nemoci</h2>
+            
+            <div class="nemoci-grid-seznam">
+                
+                <!-- GENETICKÉ NEMOCI -->
+                <div class="nemoc-karta-mala" data-kategorie="geneticke">
+                    <div class="nemoc-ikona-mala">🧬</div>
+                    <h3>Progerie</h3>
+                    <p>Předčasné stárnutí u dětí</p>
+                    <a href="#progerie" class="btn-vice-maly">Číst více →</a>
+                </div>
+
+                <div class="nemoc-karta-mala" data-kategorie="geneticke">
+                    <div class="nemoc-ikona-mala">🧬</div>
+                    <h3>FOP</h3>
+                    <p>Svaly se mění v kosti</p>
+                    <a href="#fop" class="btn-vice-maly">Číst více →</a>
+                </div>
+
+                <div class="nemoc-karta-mala" data-kategorie="geneticke">
+                    <div class="nemoc-ikona-mala">🧬</div>
+                    <h3>Hemofilie</h3>
+                    <p>Porucha srážlivosti krve</p>
+                    <a href="#hemofilie" class="btn-vice-maly">Číst více →</a>
+                </div>
+
+                <!-- NEUROLOGICKÉ NEMOCI -->
+                <div class="nemoc-karta-mala" data-kategorie="neurologicke">
+                    <div class="nemoc-ikona-mala">🧠</div>
+                    <h3>Syndrom cizí ruky</h3>
+                    <p>Ruka jedná nezávisle</p>
+                    <a href="#alien-hand" class="btn-vice-maly">Číst více →</a>
+                </div>
+
+                <div class="nemoc-karta-mala" data-kategorie="neurologicke">
+                    <div class="nemoc-ikona-mala">🧠</div>
+                    <h3>Prosopagnózie</h3>
+                    <p>Neschopnost rozpoznat tváře</p>
+                    <a href="#prosopagnozie" class="btn-vice-maly">Číst více →</a>
+                </div>
+
+                <div class="nemoc-karta-mala" data-kategorie="neurologicke">
+                    <div class="nemoc-ikona-mala">🧠</div>
+                    <h3>Syndrom explodující hlavy</h3>
+                    <p>Imaginární zvuky při spánku</p>
+                    <a href="#exploding-head" class="btn-vice-maly">Číst více →</a>
+                </div>
+
+                <!-- AUTOIMUNITNÍ NEMOCI -->
+                <div class="nemoc-karta-mala" data-kategorie="autoimunitni">
+                    <div class="nemoc-ikona-mala">🛡️</div>
+                    <h3>Lupus</h3>
+                    <p>Chronické autoimunitní onemocnění</p>
+                    <a href="#lupus" class="btn-vice-maly">Číst více →</a>
+                </div>
+
+                <div class="nemoc-karta-mala" data-kategorie="autoimunitni">
+                    <div class="nemoc-ikona-mala">🛡️</div>
+                    <h3>Crohnova choroba</h3>
+                    <p>Zánět trávicího traktu</p>
+                    <a href="#crohn" class="btn-vice-maly">Číst více →</a>
+                </div>
+
+                <div class="nemoc-karta-mala" data-kategorie="autoimunitni">
+                    <div class="nemoc-ikona-mala">🛡️</div>
+                    <h3>Revmatoidní artritida</h3>
+                    <p>Zánět kloubů</p>
+                    <a href="#artritida" class="btn-vice-maly">Číst více →</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- DETAILNÍ ČLÁNKY (stejné jako předtím) -->
+        <section class="detaily-nemoci">
+            
+            <!-- PROGERIE -->
+            <article class="nemoc" id="progerie">
+                <h2>Progerie (Hutchinson-Gilfordův syndrom)</h2>
+                <div class="nemoc-info">
+                    <span class="info-badge">Genetická</span>
+                    <span class="info-badge">Prevalence: 1:20 milionů</span>
+                </div>
+                <p class="popis">
+                    Progerie je extrémně vzácné genetické onemocnění...
+                </p>
+                <h3>Příznaky:</h3>
+                <ul>
+                    <li>Omezený růst</li>
+                    <li>Ztráta vlasů</li>
+                </ul>
+                <div class="zajimavost">
+                    <strong>💡 Zajímavost:</strong> Info...
+                </div>
+            </article>
+
+            <!-- FOP -->
+            <article class="nemoc" id="fop">
+                <h2>Fibrodysplasia ossificans progressiva (FOP)</h2>
+                <div class="nemoc-info">
+                    <span class="info-badge">Genetická</span>
+                    <span class="info-badge">Prevalence: 1:2 miliony</span>
+                </div>
+                <p class="popis">
+                    FOP je extrémně vzácné genetické onemocnění...
+                </p>
+                <h3>Příznaky:</h3>
+                <ul>
+                    <li>Abnormální formace kostí</li>
+                </ul>
+                <div class="zajimavost">
+                    <strong>💡 Zajímavost:</strong> Info...
+                </div>
+            </article>
+
+            <!-- ALIEN HAND -->
+            <article class="nemoc" id="alien-hand">
+                <h2>Syndrom cizí ruky</h2>
+                <div class="nemoc-info">
+                    <span class="info-badge">Neurologická</span>
+                </div>
+                <p class="popis">
+                    Neurologická porucha...
+                </p>
+                <h3>Příznaky:</h3>
+                <ul>
+                    <li>Nekontrolované pohyby ruky</li>
+                </ul>
+                <div class="zajimavost">
+                    <strong>💡 Zajímavost:</strong> Info...
+                </div>
+            </article>
+
+            <!-- Přidej další články... -->
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Štěpán J. | Zajímavé a vzácné nemoci</p>
+    </footer>
+
+    <!-- JAVASCRIPT PRO FILTROVÁNÍ -->
+    <script>
+        // Filtrování nemocí podle kategorie
+        const kategorieKarty = document.querySelectorAll('.kategorie-karta');
+        const nemociKarty = document.querySelectorAll('.nemoc-karta-mala');
+        const nazevKategorie = document.getElementById('aktualni-kategorie');
+
+        kategorieKarty.forEach(karta => {
+            karta.addEventListener('click', () => {
+                const kategorie = karta.getAttribute('data-kategorie');
+                
+                // Aktivní kategorie
+                kategorieKarty.forEach(k => k.classList.remove('aktivni'));
+                karta.classList.add('aktivni');
+
+                // Filtrování nemocí
+                nemociKarty.forEach(nemoc => {
+                    if (kategorie === 'vse') {
+                        nemoc.style.display = 'flex';
+                    } else {
+                        if (nemoc.getAttribute('data-kategorie') === kategorie) {
+                            nemoc.style.display = 'flex';
+                        } else {
+                            nemoc.style.display = 'none';
+                        }
+                    }
+                });
+
+                // Změna nadpisu
+                const nazvy = {
+                    'vse': 'Všechny nemoci',
+                    'geneticke': 'Genetické nemoci',
+                    'autoimunitni': 'Autoimunitní nemoci',
+                    'neurologicke': 'Neurologické nemoci'
+                };
+                nazevKategorie.textContent = nazvy[kategorie] || 'Všechny nemoci';
+
+                // Plynulé scrollování k seznamu
+                document.querySelector('.seznam-nemoci').scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

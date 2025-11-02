@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Štěpán J.">
+    <meta name="keywords" content="nemoci, léčba, příznaky, vzácné nemoci">
+        <title>
+            zajímavé a vzácné nemoci
+        </title>
+    <meta name="description" content="Stránka věnovaná zajímavím nemocím.">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="grafika.css">
+    <link rel="icon" href="">                                                       <!---dodělat-->
+</head>
+
+<body>
+    <header>
+        <!-- LOGO - odkaz na domovskou stránku -->
+        <a href="index.html" class="logo">
+            🧬 Zajímavé a vzácné nemoci
+        </a>
+
+        <!-- MENU -->
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Domů</a></li>
+                <li><a href="o-nemocech.html">O vzácních nemocech</a></li>
+                <li><a href="nemoci.html">Seznam nemocí</a></li>
+                <li><a href="o-webu.html">O webu</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <!-- HLEDÁNÍ -->
+        <div class="search">
+            <input type="text" placeholder="Hledat nemoc...">
+            <button>🔍</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Vítejte na stránce o vzácných nemocech</h1>
+            <p class="hero-popis">
+                Objevte fascinující svět vzácných a neobvyklých onemocnění. 
+                Lidské tělo je komplexní systém, který občas ale nefunguje správně. Tahle stránka vás má informovat o některých zajímavích nemocech ale nenahrazuje odbornou konzultaci s lékařem.
+            </p>
+            <a href="nemoci.html" class="btn-primary">Prozkoumat nemoci</a>
+        </section>
+        <!-- 3 základní informace -->
+        <section class="statistiky">
+            <div class="stat-box">
+                <h2>6 000+</h2>
+                <p>Vzácných nemocí</p>
+            </div>
+            <div class="stat-box">
+                <h2>75%</h2>
+                <p>Způsobuje genetika</p>
+            </div>
+            <div class="stat-box">
+                <h2>300 milionů</h2>
+                <p>Lidí s vzácním onemocením</p>
+            </div>
+        </section>
+
+        <!-- řádky s nemoci  -->
+
+        <section class="preview">
+            <h2>Seznam nemocí</h2>
+        <div class="nemoci-grid">
+        
+        <div class="nemoc-karta">
+            <div class="nemoc-ikona">🧬</div>
+            <h3>Progerie</h3>
+            <p>Genetické onemocnění způsobující extrémně rychlé stárnutí u dětí</p>
+            <a href="nemoci.html#progerie" class="btn-vice">Číst více →</a>
+        </div>
+
+        <div class="nemoc-karta">
+            <div class="nemoc-ikona">🖐️</div>
+            <h3>Syndrom cizí ruky</h3>
+            <p>Ruka se chová nezávisle na vědomé kontrole pacienta</p>
+            <a href="nemoci.html#alien-hand" class="btn-vice">Číst více →</a>
+        </div>
+
+        <div class="nemoc-karta">
+            <div class="nemoc-ikona">🦴</div>
+            <h3>FOP</h3>
+            <p>Svaly a měkké tkáně se postupně mění v kosti</p>
+            <a href="nemoci.html#fop" class="btn-vice">Číst více →</a>
+        </div>
+
+        <div class="nemoc-karta">
+            <div class="nemoc-ikona">💥</div>
+            <h3>Syndrom explodující hlavy</h3>
+            <p>Pacient slyší hlasité imaginární zvuky při usínání</p>
+            <a href="nemoci.html#exploding-head" class="btn-vice">Číst více →</a>
+        </div>
+
+        <div class="nemoc-karta">
+            <div class="nemoc-ikona">👤</div>
+            <h3>Prosopagnózie</h3>
+            <p>Neschopnost rozpoznávat lidské tváře</p>
+            <a href="nemoci.html#prosopagnozie" class="btn-vice">Číst více →</a>
+        </div>
+
+        <div class="nemoc-karta">
+            <div class="nemoc-ikona">🪨</div>
+            <h3>Pica</h3>
+            <p>Nutkavá touha konzumovat nepotravní látky</p>
+            <a href="nemoci.html#pica" class="btn-vice">Číst více →</a>
+        </div>
+        </div>
+
+    </section>
+    </main>
+
+    <!-- PATIČKA -->
+    <footer>
+        <p>&copy; 2025 Štěpán J. | Zajímavé a vzácné nemoci</p>
+        <p class="disclaimer">Informace slouží pouze ke vzdělávacím účelům.</p>
+    </footer>
+    
+    <script>
+        // Animace počítání čísel
+        function animateCounter(element, target, suffix = '', duration = 2000) {
+            let current = 0;
+            const increment = target / (duration / 16);
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target.toLocaleString('cs-CZ') + suffix;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current).toLocaleString('cs-CZ') + suffix;
+                }
+            }, 16);
+        }
+
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const counter1 = document.querySelector('.stat-box:nth-child(1) h2');
+                const counter2 = document.querySelector('.stat-box:nth-child(2) h2');
+                const counter3 = document.querySelector('.stat-box:nth-child(3) h2');
+                
+                if (counter1) animateCounter(counter1, 6000, '+', 2000);
+                if (counter2) animateCounter(counter2, 75, '%', 2000);
+                if (counter3) animateCounter(counter3, 300, ' milionů', 2500);
+            }, 300);
+        });
+    </script>
+</body>
+</html>
